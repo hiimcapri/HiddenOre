@@ -21,12 +21,16 @@ import org.bukkit.Note;
 import org.bukkit.Particle;
 import org.bukkit.Server;
 import org.bukkit.Sound;
+import org.bukkit.SoundCategory;
 import org.bukkit.Statistic;
 import org.bukkit.WeatherType;
 import org.bukkit.World;
+import org.bukkit.advancement.Advancement;
+import org.bukkit.advancement.AdvancementProgress;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeInstance;
 import org.bukkit.block.Block;
+import org.bukkit.block.PistonMoveReaction;
 import org.bukkit.conversations.Conversation;
 import org.bukkit.conversations.ConversationAbandonedEvent;
 import org.bukkit.entity.Entity;
@@ -44,6 +48,7 @@ import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.InventoryView.Property;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.MainHand;
+import org.bukkit.inventory.Merchant;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.map.MapView;
 import org.bukkit.metadata.MetadataValue;
@@ -463,11 +468,6 @@ public class FakePlayer implements Player {
 	}
 
 	@Override
-	public List<Block> getLineOfSight(HashSet<Byte> transparent, int maxDistance) {
-		return null;
-	}
-
-	@Override
 	public List<Block> getLineOfSight(Set<Material> transparent, int maxDistance) {
 		return null;
 	}
@@ -525,18 +525,7 @@ public class FakePlayer implements Player {
 	}
 
 	@Override
-	public int _INVALID_getLastDamage() {
-
-		return 0;
-	}
-
-	@Override
 	public void setLastDamage(double damage) {
-
-	}
-
-	@Override
-	public void _INVALID_setLastDamage(int damage) {
 
 	}
 
@@ -1034,28 +1023,12 @@ public class FakePlayer implements Player {
 	}
 
 	@Override
-	public void _INVALID_damage(int amount) {
-
-	}
-
-	@Override
 	public void damage(double amount, Entity source) {
 
 	}
-
-	@Override
-	public void _INVALID_damage(int amount, Entity source) {
-
-	}
-
+	
 	@Override
 	public double getHealth() {
-
-		return 0;
-	}
-
-	@Override
-	public int _INVALID_getHealth() {
 
 		return 0;
 	}
@@ -1066,29 +1039,13 @@ public class FakePlayer implements Player {
 	}
 
 	@Override
-	public void _INVALID_setHealth(int health) {
-
-	}
-
-	@Override
 	public double getMaxHealth() {
 
 		return 0;
 	}
 
 	@Override
-	public int _INVALID_getMaxHealth() {
-
-		return 0;
-	}
-
-	@Override
 	public void setMaxHealth(double health) {
-
-	}
-
-	@Override
-	public void _INVALID_setMaxHealth(int health) {
 
 	}
 
@@ -1146,11 +1103,6 @@ public class FakePlayer implements Player {
 	public boolean isBanned() {
 
 		return false;
-	}
-
-	@Override
-	public void setBanned(boolean banned) {
-
 	}
 
 	@Override
@@ -1840,5 +1792,179 @@ public class FakePlayer implements Player {
 
 	@Override
 	public void stopSound(String sound) {
+	}
+
+	@Override
+	public int getCooldown(Material arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Entity getShoulderEntityLeft() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Entity getShoulderEntityRight() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean hasCooldown(Material arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isHandRaised() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public InventoryView openMerchant(Merchant arg0, boolean arg1) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setCooldown(Material arg0, int arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setShoulderEntityLeft(Entity arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setShoulderEntityRight(Entity arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public PotionEffect getPotionEffect(PotionEffectType arg0) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean addPassenger(Entity arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean addScoreboardTag(String arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public double getHeight() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<Entity> getPassengers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PistonMoveReaction getPistonMoveReaction() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getPortalCooldown() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Set<String> getScoreboardTags() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public double getWidth() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean removePassenger(Entity arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean removeScoreboardTag(String arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void setPortalCooldown(int arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public AdvancementProgress getAdvancementProgress(Advancement arg0) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getLocale() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void playSound(Location arg0, Sound arg1, SoundCategory arg2, float arg3, float arg4) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void playSound(Location arg0, String arg1, SoundCategory arg2, float arg3, float arg4) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sendTitle(String arg0, String arg1, int arg2, int arg3, int arg4) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setResourcePack(String arg0, byte[] arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void stopSound(Sound arg0, SoundCategory arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void stopSound(String arg0, SoundCategory arg1) {
+		// TODO Auto-generated method stub
+		
 	}
 }
